@@ -1,7 +1,13 @@
-export default function App() {
+import { Provider } from "react-redux";
+import Body from "./components/Body";
+import appStore from "./utils/appStore";
+
+function App() {
   return (
-    <h1 className="text-3xl font-bold text-green-800 underline">
-      Hello Nitesh NETFLX-FGPT !
-    </h1>
-  )
+    <Provider store={appStore}>
+      <Body />
+    </Provider>
+  );
 }
+
+export default App;
